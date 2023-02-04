@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controller/Controller.dart';
+
 class Detail extends StatefulWidget {
   Detail({Key? key}) : super(key: key);
 
@@ -9,16 +11,20 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
-  String title = Get.arguments[0];
+  //String title = Get.arguments[0];
   @override
   Widget build(BuildContext context) {
+    final args = Get.arguments[0];
+    final myController = Get.find<Controller>();
+    myController.myData.value = args;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(title, style: const TextStyle(fontSize: 40, color: Colors.white)),
+          Text(myController.myData.value,
+              style: const TextStyle(fontSize: 40, color: Colors.white)),
           const SizedBox(height: 50),
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),

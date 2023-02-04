@@ -30,9 +30,9 @@ class _BottomBarState extends State<BottomBar> {
       //extendBody: true,
       backgroundColor: Colors.transparent,
       //appBar: AppBar(),
-      body: const SafeArea(
+      body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
         child: Home(),
       )),
       bottomNavigationBar: BottomNavigationBar(

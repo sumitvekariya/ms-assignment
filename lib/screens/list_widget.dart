@@ -67,7 +67,7 @@ class Transactions extends StatelessWidget {
                 ),
               ),
               Text(
-                "$time",
+                time,
                 style: TextStyle(
                   color: Colors.blue[500],
                   fontSize: 12.0,

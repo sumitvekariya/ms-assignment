@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import 'list_widget.dart';
@@ -94,6 +95,22 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+        // GetX<TransactionController>(
+        //   init: TransactionController(),
+        //   builder: (controller) => ListView.builder(
+        //     scrollDirection: Axis.vertical,
+        //     shrinkWrap: true,
+        //     itemCount: list.length,
+        //     itemBuilder: (context, index) {
+        //       return Transactions(
+        //         title: list[index]["title"],
+        //         amount: list[index]["amount"],
+        //         imageAddress: list[index]["img"],
+        //         time: formattedDate,
+        //       );
+        //     },
+        //   ),
+        // ),
         ListView.builder(
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
@@ -134,5 +151,13 @@ class Home extends StatelessWidget {
             })
       ],
     );
+  }
+}
+
+class TransactionController extends GetxController {
+  var selectedTransaction = 0.obs;
+
+  void selectTransaction(int index) {
+    selectedTransaction.value = index;
   }
 }
