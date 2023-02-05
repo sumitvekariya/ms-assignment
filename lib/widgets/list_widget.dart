@@ -28,7 +28,8 @@ class Transactions extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
           onTap: () {
-            Get.to(() => Detail(), arguments: [title], preventDuplicates: true);
+            Get.to(() => const Detail(),
+                arguments: [title], preventDuplicates: true);
           },
           leading: CircleAvatar(
             radius: 20.0,

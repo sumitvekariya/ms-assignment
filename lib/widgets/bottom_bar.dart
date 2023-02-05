@@ -30,11 +30,13 @@ class _BottomBarState extends State<BottomBar> {
       //extendBody: true,
       backgroundColor: Colors.transparent,
       //appBar: AppBar(),
-      body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
-        child: Home(),
-      )),
+      body: const SingleChildScrollView(
+        child: SafeArea(
+            child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25, vertical: 35),
+          child: Home(),
+        )),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
         currentIndex: BottomBar._selectedIndex,
