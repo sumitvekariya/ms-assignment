@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import 'package:payapp/widgets/list_widget.dart';
+import 'package:payapp/widgets/transaction_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
