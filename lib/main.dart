@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:payapp/screens/bottom_bar.dart';
 
+import 'controller/Controller.dart';
+
 void main() {
+  Get.put(Controller());
   runApp(const MyApp());
 }
 
@@ -16,7 +20,9 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          fontFamily: "Palanquin Dark",
+          textTheme: GoogleFonts.palanquinDarkTextTheme(
+            Theme.of(context).textTheme,
+          ),
           primarySwatch: Colors.blue,
         ),
         home: SafeArea(
