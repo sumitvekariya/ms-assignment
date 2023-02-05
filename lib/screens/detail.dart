@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../controller/Controller.dart';
 
 class Detail extends StatefulWidget {
-  Detail({Key? key}) : super(key: key);
+  const Detail({Key? key}) : super(key: key);
 
   @override
   State<Detail> createState() => _DetailState();

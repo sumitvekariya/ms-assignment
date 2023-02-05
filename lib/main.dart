@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:payapp/screens/bottom_bar.dart';
+import 'package:payapp/widgets/bottom_bar.dart';
 
 import 'controller/Controller.dart';
 
