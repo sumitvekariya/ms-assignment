@@ -6,7 +6,7 @@ import 'package:payapp/widgets/bottom_bar.dart';
 import 'controller/Controller.dart';
 
 void main() {
-  Get.put(Controller());
+  // Get.put(Controller());
   runApp(const MyApp());
 }
 

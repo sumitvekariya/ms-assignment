@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:payapp/controller/bindings/Binding.dart';
 import 'package:payapp/screens/detail.dart';
 
 class Transactions extends StatelessWidget {
@@ -29,7 +30,9 @@ class Transactions extends StatelessWidget {
         child: ListTile(
           onTap: () {
             Get.to(() => const Detail(),
-                arguments: [title], preventDuplicates: true);
+                arguments: [title],
+                preventDuplicates: true,
+                binding: TransactionBinding());
           },
           leading: CircleAvatar(
             radius: 20.0,

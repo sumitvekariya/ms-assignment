@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
 
-class Controller extends GetxController {
-  var myData = "".obs;
+class DataController extends GetxController {
+  var companyName = "".obs;
 }

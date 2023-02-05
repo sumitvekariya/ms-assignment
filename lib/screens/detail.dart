@@ -15,15 +15,15 @@ class _DetailState extends State<Detail> {
   @override
   Widget build(BuildContext context) {
     final args = Get.arguments[0];
-    final myController = Get.find<Controller>();
-    myController.myData.value = args;
+    final dataController = Get.find<DataController>();
+    dataController.companyName.value = args;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(myController.myData.value,
+          Text(dataController.companyName.value,
               style: const TextStyle(fontSize: 40, color: Colors.white)),
           const SizedBox(height: 50),
           ElevatedButton(
